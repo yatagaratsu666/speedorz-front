@@ -1,0 +1,39 @@
+<body>
+    <div class="container">
+        <h2>GESTIÓN DE IMPUESTOS</h2>
+
+        <!-- Contenedor del subtítulo y botón "Agregar" -->
+        <div class="header">
+            <h3>Descuentos Activos</h3>
+            <button (click)="agregarDescuento()" class="agregar-btn">Agregar Descuento</button>
+        </div>
+
+        <table class="Impuestos-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Porcentaje</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Iteración sobre la lista de impuestos -->
+              @for (descuento of descuentos; track descuento.id) {
+                <tr>
+                  <td>{{ descuento.id }}</td>
+                  <td>{{ descuento.nombre }}</td> 
+                  <td>{{ descuento.descripcion }}</td> 
+                  <td>{{ descuento.porcentaje }}%  </td>
+                  <td>
+                    <!-- Botón para modificar el usuario -->
+                    <button (click)="modificarDescuento(descuento.id)" class="modificar-btn">Modificar Descuento</button>
+                    <button (click)="eliminarDescuento(descuento.id)" class="dar-baja-btn">Eliminar Descuento</button>
+                  </td>
+                </tr>
+              }
+            </tbody>
+        </table>
+    </div>
+</body>

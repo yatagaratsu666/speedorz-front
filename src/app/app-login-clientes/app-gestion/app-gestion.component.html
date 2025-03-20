@@ -1,0 +1,55 @@
+<main class="container">
+  <div class="content-box">
+    <!-- Botón para cerrar sesión -->
+    <div class="logout-container">
+      <button type="button" class="logout-button" (click)="cerrarSesion()">Cerrar Sesión</button>
+    </div>
+
+    <!-- Título de la sección -->
+    <h2>Lista de Clientes</h2>
+
+    <!-- Grupo de búsqueda de clientes -->
+    <div class="search-group">
+      <!-- Campo de entrada para búsqueda por nombre -->
+      <input type="text" id="search" placeholder="Buscar por nombre..." [(ngModel)]="busquedaNombre">
+      <button type="submit" id="search-button" class="search-button" (click)="buscarPorNombre()">Buscar</button>
+
+      <!-- Campo de entrada para búsqueda por ID -->
+      <input type="number" id="search-id" placeholder="Buscar por ID..." [(ngModel)]="busquedaId">
+      <button type="submit" id="search-id-button" class="search-button" (click)="buscarPorId()">Buscar</button>
+    </div>
+
+    <!-- Botón para agregar un nuevo usuario -->
+    <button type="submit" class="add-user-button" routerLink="/clientes/register">Agregar Usuario</button>
+
+    <!-- Tabla que muestra la lista de clientes -->
+    <table class="user-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre Completo</th>
+          <th>Cédula</th>
+          <th>Dirección</th>
+          <th>Teléfono</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Iteración sobre la lista de clientes -->
+        @for (cliente of clientes; track cliente.idCliente) {
+          <tr>
+            <td>{{ cliente.idCliente }}</td> <!-- Muestra el ID del cliente -->
+            <td>{{ cliente.nombreLegal }}</td> <!-- Muestra el nombre completo -->
+            <td>{{ cliente.numeroIdentificacion }}</td> <!-- Muestra la cédula -->
+            <td>{{ cliente.direccion }}</td> <!-- Muestra la dirección -->
+            <td>{{ cliente.telefono }}</td> <!-- Muestra el teléfono -->
+            <td>
+              <!-- Botón para modificar el usuario -->
+              <button (click)="modificarUsuario(cliente.idCliente)" class="btn modificar">Modificar Usuario</button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</main>

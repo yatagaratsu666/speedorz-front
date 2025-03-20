@@ -1,0 +1,39 @@
+<main>
+  <div class="management-container">
+    
+    <!-- Contenedor del botón de cierre de sesión -->
+    <div class="logout-container">
+      <!-- Botón para cerrar sesión, llama a la función cerrarSesion() al hacer clic -->
+      <button type="button" class="logout-button" (click)="cerrarSesion()">Cerrar Sesión</button>
+    </div>
+
+    <!-- Título principal de la sección de gestión de usuarios -->
+    <h2>Gestión de Usuarios</h2>
+
+    <!-- Barra de búsqueda de usuarios -->
+    <div class="search-bar">
+      <!-- Campo de entrada para búsqueda de usuario por nombre -->
+      <input type="text" id="search" placeholder="Buscar usuario..." [(ngModel)]="searchTerm" 
+        (keyup.enter)="buscarUsuarios()">
+      <!-- Botón para ejecutar la búsqueda por nombre -->
+      <button type="submit" id="search-button" class="search-button" (click)="buscarUsuarios()">Buscar</button>
+
+      <!-- Campo de entrada para búsqueda de usuario por ID -->
+      <input type="number" id="search-id" placeholder="Buscar por ID..." [(ngModel)]="searchId">
+      <!-- Botón para ejecutar la búsqueda por ID -->
+      <button type="submit" id="search-id-button" class="search-button" (click)="buscarUsuarioPorId()">Buscar</button>
+    </div>
+
+    <!-- Botón para agregar un nuevo usuario, redirige a la página de registro -->
+    <button type="submit" class="add-user-button" routerLink="/usuarios/register">Agregar Usuario</button>
+
+    <!-- Componente que muestra la lista de usuarios -->
+    <app-gestion-lista 
+      [usuariosFiltrados]="usuariosFiltrados" 
+      (usuarioActualizado)="cargarUsuarios()">
+    </app-gestion-lista>
+
+    <!-- Línea divisoria decorativa -->
+    <div class="rectangle" aria-hidden="true"></div>
+  </div>
+</main>

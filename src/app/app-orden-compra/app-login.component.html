@@ -1,0 +1,33 @@
+<!-- Contenedor principal del formulario de inicio de sesión -->
+<main>
+  <div class="login-container">
+    <!-- Título del formulario de inicio de sesión -->
+    <h2>Inicio Sesión Asesor Comercial</h2>
+
+    <!-- Formulario de inicio de sesión con evento (ngSubmit) para manejar el envío -->
+    <form id="login-form" (ngSubmit)="onSubmit()">
+      
+      <!-- Grupo de entrada para el nombre de usuario -->
+      <div class="input-group">
+        <label for="username">Usuario</label>
+        <!-- Campo de entrada para el usuario, enlazado al componente con [(ngModel)] -->
+        <input type="text" id="username" name="username" [(ngModel)]="username" required>
+      </div>
+
+      <!-- Grupo de entrada para la contraseña -->
+      <div class="input-group">
+        <label for="password">Contraseña</label>
+        <!-- Campo de entrada para la contraseña, enlazado al componente con [(ngModel)] -->
+        <input type="password" id="password" name="password" [(ngModel)]="password" required>
+      </div>
+
+      <!-- Botón de envío del formulario -->
+      <button type="submit" class="login-button">Iniciar Sesión</button>
+    </form>
+
+    <!-- Enlace para recuperar la contraseña -->
+    <div class="forgot-password">
+      <a>¿Has olvidado tu contraseña?</a>
+    </div>
+  </div>
+</main>

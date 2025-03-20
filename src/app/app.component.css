@@ -1,0 +1,31 @@
+    /* Estilo para la barra superior */
+.navbar-top {
+    background-color: white; 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed; /* Fijar la barra de navegación */
+    top: 0; /* Asegura que esté en la parte superior */
+    z-index: 1000;
+    border-bottom: 2px solid #b8b8b8;
+}
+
+    /* Estilo para la barra superior */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%; 
+    align-items: center; 
+}
+
+    /* Estilo para la imagen del logo en la barra superior */
+    .logo {
+        width: 100px; /* Ajusta el tamaño del logo */
+        height: 55px;
+        width: 65px;
+        margin-top: 5px;
+    }
+    

@@ -1,0 +1,123 @@
+/*
+  @file estilos-usuarios.css
+  @description Estilos para la tabla de gestión de usuarios, incluyendo diseño de celdas, botones y comportamiento responsivo.
+*/
+
+/* 
+  Estilos generales para la tabla de usuarios.
+  - Se ajusta al 100% del contenedor.
+  - Se colapsan los bordes para un mejor diseño.
+  - Se fija el layout de la tabla para evitar cambios inesperados en el tamaño de las celdas.
+*/
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    table-layout: fixed;
+    width: 100%;
+}
+
+/* 
+  Estilos para las celdas de la tabla (th y td).
+  - Se aplica un tamaño de fuente de 12px para mejorar la legibilidad.
+  - Se establece un borde gris en cada celda.
+  - Se alinea el texto al centro.
+  - Se habilita el ajuste de palabras largas para evitar desbordamientos.
+*/
+.user-table th, .user-table td {
+    font-size: 12px;
+    border: 1px solid #cdcdcd;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* 
+  Estilos para los encabezados de la tabla.
+  - Fondo gris claro para diferenciarse del contenido.
+  - Texto en negrita y color gris oscuro para mayor contraste.
+  - Espaciado interno de 0.5rem.
+*/
+.user-table th {
+    background-color: #eaeaea;
+    font-weight: bold;
+    color: #555;
+    padding: 0.5rem;
+}
+
+/* 
+  Estilos para los botones dentro de las celdas.
+  - Tamaño uniforme con padding de 0.5rem y margen de 0.5rem.
+  - Ancho del 80% de la celda para alineación estética.
+  - Bordes redondeados y sin borde exterior.
+  - Efecto de transición para cambios de color al pasar el cursor.
+*/
+.user-table td button {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    width: 80%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* 
+  Estilos específicos para el botón de edición.
+  - Color de fondo amarillo (tono #f8b400).
+  - Texto en blanco para contraste.
+  - Cambio de color al pasar el cursor a un tono más oscuro.
+*/
+.edit-button {
+    background-color: #f8b400;
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #f08d00;
+}
+
+/* 
+  Estilos para el botón de desactivación de usuario.
+  - Fondo rojo (#ff5c5c).
+  - Texto en blanco.
+  - Cambio de color a un rojo más intenso en hover.
+*/
+.deactivate-button {
+    background-color: #ff5c5c;
+    color: white;
+}
+
+.deactivate-button:hover {
+    background-color: #ff0000;
+}
+
+/* 
+  Estilos para el botón de activación de usuario.
+  - Fondo verde (#4caf50).
+  - Texto en blanco.
+  - Cambio de color a un verde más oscuro en hover.
+*/
+.activate-button {
+    background-color: #4caf50;
+    color: white;
+}
+
+.activate-button:hover {
+    background-color: #45a049;
+}
+
+/* 
+  Estilos para el botón de eliminación de usuario.
+  - Fondo gris (#9e9e9e).
+  - Texto en blanco.
+  - Cambio de color a un tono gris más oscuro en hover.
+*/
+.delete-button {
+    background-color: #9e9e9e;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #757575;
+}

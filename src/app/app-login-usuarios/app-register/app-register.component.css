@@ -1,0 +1,88 @@
+/* Estilos para el contenedor principal */
+main {
+    display: flex; /* Usa flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+}
+
+/* Estilos para el contenedor del formulario de registro */
+.register-container {
+    background-color: white; /* Fondo blanco */
+    padding: 4rem; /* Espaciado interno amplio */
+    margin-top: 70px; /* Margen superior para separación */
+    margin-bottom: 40px; /* Margen inferior para separación */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera para resaltar el formulario */
+    width: 30%; /* Ancho del formulario */
+    max-width: 1000px; /* Limita el ancho máximo */
+}
+
+/* Estilos para el título del formulario */
+.register-container h2 {
+    margin-bottom: 2.2rem; /* Espaciado inferior */
+    border-bottom: 1.5px solid #b8b8b8; /* Línea separadora debajo del título */
+    padding-bottom: 1.2rem; /* Espaciado interno en la parte inferior */
+    font-size: 2rem; /* Tamaño del texto */
+    text-align: justify; /* Alineación del texto */
+    color: #555; /* Color gris oscuro */
+}
+
+/* Estilos para los grupos de entradas del formulario */
+.input-group {
+    margin-bottom: 2rem; /* Espaciado inferior entre los campos */
+    text-align: left; /* Alineación del texto a la izquierda */
+}
+
+/* Estilos para las etiquetas de los campos de entrada */
+.input-group label {
+    display: block; /* Hace que la etiqueta ocupe toda la línea */
+    font-weight: bold; /* Negrita */
+    margin-bottom: 0.5rem; /* Espaciado inferior */
+    color: #8b8b8b; /* Color gris */
+}
+
+/* Estilos para el selector de roles */
+.input-group select {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 0.55rem; /* Espaciado interno */
+    border: 1px solid #939393; /* Borde gris */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+}
+
+/* Estilos para los campos de entrada de texto */
+.input-group input {
+    width: 96%; /* Ocupa el 96% del ancho del contenedor */
+    padding: 0.5rem; /* Espaciado interno */
+    border: 1px solid #939393; /* Borde gris */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+}
+
+/* Estilos para el botón de registro */
+.register-button {
+    background-color: #99bada; /* Color de fondo azul claro */
+    color: whitesmoke; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 0.75rem; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+    transition: background-color 0.3s; /* Transición suave al cambiar de color */
+    cursor: pointer; /* Cambia el cursor a un puntero */
+}
+
+/* Cambia el color de fondo cuando el usuario pasa el cursor sobre el botón */
+.register-button:hover {
+    background-color: #738ca5; /* Azul más oscuro */
+}
+
+/* Estilos para la línea separadora debajo del formulario */
+.rectangle {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 0.5px; /* Altura mínima */
+    margin-top: 1.9rem; /* Espaciado superior */
+    background: #b8b8b8; /* Color gris claro */
+    border: 0; /* Sin borde */
+    border-radius: 0; /* Sin bordes redondeados */
+}

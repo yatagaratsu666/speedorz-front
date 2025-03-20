@@ -1,0 +1,190 @@
+body {
+    background: url('https://i.pinimg.com/736x/05/dd/f2/05ddf2b9e9326e060ee7aa72c3322735.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+}
+
+h2 {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* Contenedor del subtítulo y botón "Agregar" */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: gray;
+    text-align: left;
+    margin: 0;
+}
+
+.agregar-btn {
+    background: green;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.agregar-btn:hover {
+    background: darkgreen;
+}
+
+.lista-impuestos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-impuestos li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    background: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+/* Contenedor de los botones "Modificar" y "Dar de Baja" */
+.botones {
+    display: flex;
+    gap: 10px;
+}
+
+.dar-baja-btn, .modificar-btn {
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.dar-baja-btn {
+    background: rgb(204, 34, 34);
+}
+
+.dar-baja-btn:hover {
+    background: rgb(189, 122, 122);
+}
+
+.modificar-btn {
+    background: rgb(218, 141, 41);
+}
+
+.modificar-btn:hover {
+    background: #7373b1;
+}
+
+/* Estilos para la tabla de gestión de impuestos */
+.Impuestos-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.Impuestos-table th, .Impuestos-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.Impuestos-table th {
+    background: #4CAF50;
+    color: white;
+}
+
+/* Estilos para el formulario de inicio de sesión */
+.login-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 400px;
+    height: auto;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-button {
+    background: blue;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background: darkblue;
+}
+
+/* Estilos para el formulario de registro */
+.register-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 400px;
+    height: auto;
+}
+
+.register-container .input-group input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.register-btn {
+    background: green;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.register-btn:hover {
+    background: darkgreen;
+}

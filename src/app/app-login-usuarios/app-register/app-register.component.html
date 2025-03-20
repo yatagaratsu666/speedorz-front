@@ -1,0 +1,54 @@
+<main>
+  <!-- Contenedor principal del formulario de registro -->
+  <div class="register-container">
+      <h2>Registro Usuario</h2>
+      <!-- Formulario de registro con manejo del evento ngSubmit -->
+      <form id="register-form" (ngSubmit)="onSubmit()" autocomplete="off">
+          <div class="input-group">
+              <label for="nombre">Nombre Completo</label>
+              <!-- Campo de entrada para el nombre completo con enlace bidireccional a la propiedad 'usuario.nombreCompleto' -->
+              <input type="text" id="nombre" name="nombre" [(ngModel)]="usuario.nombreCompleto" required>
+          </div>
+          <div class="input-group">
+              <label for="cedula">Cédula</label>
+              <!-- Campo de entrada para la cédula con enlace bidireccional a 'usuario.cedula' -->
+              <input type="text" id="cedula" name="cedula" [(ngModel)]="usuario.cedula" required>
+          </div>
+          <div class="input-group">
+              <label for="direccion">Dirección</label>
+              <!-- Campo de entrada para la dirección con enlace bidireccional a 'usuario.direccion' -->
+              <input type="text" id="direccion" name="direccion" [(ngModel)]="usuario.direccion" required>
+          </div>
+          <div class="input-group">
+              <label for="rol">Rol</label>
+              <!-- Lista desplegable para seleccionar el rol del usuario -->
+              <select id="rol" name="rol" [(ngModel)]="usuario.rol" required>
+                  <option value="RECEPCION">RECEPCION</option>
+                  <option value="SECRETARIO">SECRETARIO</option>
+                  <option value="ADMINUSUARIOS">ADMINUSUARIOS</option>
+                  <option value="ADMININVENTARIO">ADMININVENTARIO</option>
+                  <option value="ASESORCOMERCIAL">ASESORCOMERCIAL</option>
+              </select>
+          </div>
+          <div class="input-group">
+              <label for="telefono">Teléfono</label>
+              <!-- Campo de entrada para el teléfono con enlace bidireccional a 'usuario.telefono' -->
+              <input type="tel" id="telefono" name="telefono" [(ngModel)]="usuario.telefono" required>
+          </div>
+          <div class="input-group">
+              <label for="usuario">Usuario</label>
+              <!-- Campo de entrada para el nombre de usuario con enlace bidireccional a 'usuario.nombreUsuario' -->
+              <input type="text" id="usuario" name="usuario" [(ngModel)]="usuario.nombreUsuario" required>
+          </div>
+          <div class="input-group">
+              <label for="contrasena">Contraseña</label>
+              <!-- Campo de entrada para la contraseña con enlace bidireccional a 'usuario.contrasena' -->
+              <input type="password" id="contrasena" name="contrasena" [(ngModel)]="usuario.contrasena" required>
+          </div>
+          <!-- Botón para enviar el formulario de registro -->
+          <button type="submit" class="register-button">Registrarse</button>
+      </form>
+      <!-- Elemento decorativo sin funcionalidad accesible -->
+      <div class="rectangle" aria-hidden="true"></div>
+  </div>
+</main>

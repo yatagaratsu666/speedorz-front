@@ -1,0 +1,174 @@
+/* Estilos para el contenedor principal */
+main.container {
+    display: flex; /* Usa flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+/* Estilos para el cuadro de contenido */
+.content-box {
+    background-color: white; /* Fondo blanco */
+    padding: 4rem; /* Espaciado interno amplio */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para efecto de elevación */
+    max-width: 1000px; /* Ancho máximo */
+    display: flex; /* Usa flexbox */
+    margin-top: 70px; /* Espaciado superior */
+    margin-bottom: 40px; /* Espaciado inferior */
+    flex-direction: column; /* Organiza el contenido en columna */
+}
+
+/* Estilos para el título dentro del cuadro de contenido */
+.content-box h2 {
+    margin-bottom: 2.5rem; /* Espaciado inferior */
+    padding-bottom: 1.2rem; /* Espaciado en la parte inferior */
+    font-size: 2.5rem; /* Tamaño de fuente grande */
+    color: #555; /* Color gris oscuro */
+    text-align: justify; /* Justificar texto */
+    border-bottom: 1px solid #b8b8b8; /* Línea divisoria en la parte inferior */
+    margin-top: 0rem; /* Sin margen superior */
+}
+
+/* Grupo de búsqueda */
+.search-group {
+    margin-bottom: 0.5rem; /* Espaciado inferior */
+    display: flex; /* Usa flexbox */
+    justify-content: flex-start; /* Alineación a la izquierda */
+    align-items: center; /* Alineación vertical centrada */
+    width: 100%; /* Ocupa todo el ancho */
+    gap: 20px; /* Espaciado entre elementos */
+}
+
+/* Estilos para los campos de entrada de búsqueda */
+.search-group input {
+    padding: 0.75rem; /* Espaciado interno */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    font-size: 1rem; /* Tamaño de fuente */
+    border-right: none !important; /* Elimina el borde derecho */
+    border-top-left-radius: 5px; /* Bordes redondeados en la parte izquierda */
+    border-bottom-left-radius: 5px;
+    border: 1px solid #939393; /* Borde gris */
+    box-sizing: border-box; /* Incluye bordes en el tamaño total */
+}
+
+/* Estilos para los botones de búsqueda */
+.search-group button {
+    padding: 0.75rem 1.5rem; /* Espaciado interno */
+    background-color: #99bada; /* Color de fondo azul claro */
+    color: white; /* Texto en blanco */
+    border: 1px solid #99bada; /* Borde del mismo color del fondo */
+    border-top-right-radius: 5px; /* Bordes redondeados en la parte derecha */
+    border-bottom-right-radius: 5px;
+    cursor: pointer; /* Cursor tipo puntero */
+    margin-left: -20px; /* Ajuste de posición */
+    width: 15%; /* Tamaño proporcional */
+    font-size: 1rem; /* Tamaño de fuente */
+    transition: background-color 0.3s; /* Transición suave en el cambio de color */
+}
+
+/* Etiquetas dentro del grupo de búsqueda */
+.search-group label {
+    display: block; /* Bloque independiente */
+    font-weight: bold; /* Texto en negrita */
+    margin-bottom: 0.5rem; /* Espaciado inferior */
+    color: #8b8b8b; /* Color de texto gris */
+}
+
+/* Efecto hover para los botones de búsqueda */
+.search-group button:hover {
+    background-color: #738ca5; /* Cambio de color al pasar el cursor */
+}
+
+/* Botón para agregar un nuevo usuario */
+.add-user-button {
+    width: 16%; /* Ancho proporcional */
+    background-color: #99bada; /* Color de fondo */
+    color: white; /* Texto en blanco */
+    border: none; /* Sin bordes */
+    padding: 0.75rem; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 1rem; /* Tamaño de fuente */
+    margin-top: 1rem; /* Espaciado superior */
+    cursor: pointer; /* Cursor tipo puntero */
+    transition: background-color 0.3s; /* Transición de color */
+}
+
+/* Efecto hover para el botón de agregar usuario */
+.add-user-button:hover {
+    background-color: #738ca5; /* Cambio de color al pasar el cursor */
+}
+
+/* Estilos para la tabla de usuarios */
+.user-table {
+    width: 100%; /* Ocupa todo el ancho */
+    border-collapse: collapse; /* Sin separación entre bordes */
+    margin-top: 1.5rem; /* Espaciado superior */
+    table-layout: fixed; /* Distribución uniforme */
+}
+
+/* Estilos para las celdas de la tabla */
+.user-table th, .user-table td {
+    font-size: 12px; /* Tamaño de fuente pequeño */
+    border: 1px solid #cdcdcd; /* Bordes de las celdas */
+    text-align: center; /* Texto centrado */
+    word-wrap: break-word; /* Permite cortar palabras largas */
+    overflow-wrap: break-word; /* Asegura que las palabras largas se ajusten */
+    padding: 0.5rem; /* Espaciado interno */
+}
+
+/* Estilos para los encabezados de la tabla */
+.user-table th {
+    background-color: #eaeaea; /* Color de fondo gris claro */
+    font-weight: bold; /* Texto en negrita */
+    color: #555; /* Color gris oscuro */
+}
+
+/* Estilos para los botones dentro de la tabla */
+.user-table td button {
+    padding: 0.5rem; /* Espaciado interno */
+    margin: 0.5rem; /* Margen entre botones */
+    width: 80%; /* Ancho del botón */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor tipo puntero */
+    transition: background-color 0.3s; /* Transición suave en el color */
+}
+
+/* Estilos para el botón de modificar usuario */
+.modificar {
+    background-color: #f8b400; /* Color de fondo amarillo */
+    color: white; /* Texto en blanco */
+}
+
+/* Efecto hover para el botón de modificar */
+.modificar:hover {
+    background-color: #f08d00; /* Cambio de color al pasar el cursor */
+}
+
+/* Contenedor del botón de cierre de sesión */
+.logout-container {
+    display: flex; /* Usa flexbox */
+    margin-bottom: 1rem; /* Espaciado inferior */
+}
+
+/* Estilos para el botón de cierre de sesión */
+.logout-button {
+    width: 14%; /* Ancho proporcional */
+    background-color: #bdbdbd; /* Color de fondo gris */
+    color: white; /* Texto en blanco */
+    border: none; /* Sin bordes */
+    padding: 0.5rem; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 1rem; /* Tamaño de fuente */
+    margin-top: 1rem; /* Espaciado superior */
+    cursor: pointer; /* Cursor tipo puntero */
+    transition: background-color 0.3s; /* Transición de color */
+    margin-bottom: 25px; /* Espaciado inferior */
+}
+
+/* Efecto hover para el botón de cierre de sesión */
+.logout-button:hover {
+    background-color: rgb(123, 123, 123); /* Cambio de color al pasar el cursor */
+}

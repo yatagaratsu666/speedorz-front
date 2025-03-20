@@ -1,0 +1,62 @@
+<!-- Contenedor principal del formulario de modificación de usuario -->
+<div class="modify-container">
+  <!-- Título del formulario -->
+  <h2>Modificar Usuario</h2>
+  
+  <!-- Formulario para modificar los datos del usuario -->
+  <!-- Se muestra solo si la variable 'usuario' está definida -->
+  <!-- Se ejecuta la función 'onSubmit()' al enviar el formulario -->
+  <form *ngIf="usuario" (ngSubmit)="onSubmit()">
+    
+    <!-- Grupo de entrada para el nombre completo -->
+    <div class="input-group">
+      <label for="nombreCompleto">Nombre Completo</label>
+      <!-- Campo de entrada de texto con enlace bidireccional a 'usuario.nombreCompleto' -->
+      <input type="text" id="nombreCompleto" [(ngModel)]="usuario.nombreCompleto" name="nombreCompleto" required>
+    </div>
+    
+    <!-- Grupo de entrada para el nombre de usuario -->
+    <div class="input-group">
+      <label for="nombreUsuario">Usuario</label>
+      <!-- Campo de entrada de texto con enlace a 'usuario.nombreUsuario' -->
+      <input type="text" id="nombreUsuario" [(ngModel)]="usuario.nombreUsuario" name="nombreUsuario" required>
+    </div>
+    
+    <!-- Grupo de entrada para la cédula -->
+    <div class="input-group">
+      <label for="cedula">Cédula</label>
+      <!-- Campo de entrada de texto en solo lectura con enlace a 'usuario.cedula' -->
+      <input type="text" id="cedula" [(ngModel)]="usuario.cedula" name="cedula" readonly>
+    </div>
+    
+    <!-- Grupo de entrada para la dirección -->
+    <div class="input-group">
+      <label for="direccion">Dirección</label>
+      <!-- Campo de entrada de texto con enlace a 'usuario.direccion' -->
+      <input type="text" id="direccion" [(ngModel)]="usuario.direccion" name="direccion" required>
+    </div>
+    
+    <!-- Grupo de entrada para el teléfono -->
+    <div class="input-group">
+      <label for="telefono">Teléfono</label>
+      <!-- Campo de entrada de teléfono con enlace a 'usuario.telefono' -->
+      <input type="tel" id="telefono" [(ngModel)]="usuario.telefono" name="telefono" required>
+    </div>
+    
+    <!-- Grupo de entrada para la selección del rol -->
+    <div class="input-group">
+      <label for="rol">Rol</label>
+      <!-- Menú desplegable para seleccionar el rol del usuario -->
+      <select id="rol" [(ngModel)]="usuario.rol" name="rol" required>
+        <option value="RECEPCION">RECEPCION</option>
+        <option value="SECRETARIO">SECRETARIO</option>
+        <option value="ADMINUSUARIOS">ADMINUSUARIOS</option>
+        <option value="ADMININVENTARIO">ADMININVENTARIO</option>
+        <option value="ASESORCOMERCIAL">ASESORCOMERCIAL</option>
+      </select>
+    </div>
+    
+    <!-- Botón para enviar el formulario y guardar los cambios -->
+    <button type="submit" class="modify-button">Guardar Cambios</button>
+  </form>
+</div>

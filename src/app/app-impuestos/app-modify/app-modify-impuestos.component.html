@@ -1,0 +1,32 @@
+<main class="container">
+    <!-- Contenedor principal que envuelve todo el formulario -->
+    <div class="content-box">
+      <!-- Formulario de registro de impuesto con Angular -->
+      <form id="register-form" (ngSubmit)="onSubmit()" autocomplete="off">
+        <!-- Contenedor que agrupa los elementos del formulario -->
+        <div class="register-container">           
+            <!-- Título del formulario -->
+            <h2>Modificar Impuesto</h2>
+  
+            <!-- Campo de entrada para el nombre legal del cliente -->
+            <div class="input-group">
+              <input type="text" placeholder="Nombre de Impuesto" [(ngModel)]="impuesto.nombre" name="nombre" required>
+            </div>
+          
+            <!-- Campo de entrada para el número de identificación -->
+            <div class="input-group">
+              <input type="text" placeholder="Descripción" [(ngModel)]="impuesto.descripcion" name="descripcion" required>
+            </div>
+          
+            <!-- Campo de entrada para el número de teléfono -->
+            <div class="input-group">
+              <input type="number" placeholder="Porcentaje" [(ngModel)]="impuesto.porcentaje" name="porcentaje" required>
+            </div>
+
+            <!-- Botón para enviar el formulario y registrar al cliente -->
+            <button class="register-btn" type="submit">Modificar Impuesto</button>
+        </div>
+      </form> 
+    </div>
+  </main>
+  

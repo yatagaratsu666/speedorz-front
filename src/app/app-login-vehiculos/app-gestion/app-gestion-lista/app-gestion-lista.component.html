@@ -1,0 +1,45 @@
+<!-- 
+  @component GestionListaVehiculoComponent
+  @description Sección de gestion de la liesta con los vehículos en la aplicación. 
+  Permite verlos detalles de un vehículo existente en el sistema.
+-->
+
+<!-- Tabla que muestra la lista de vehículos filtrados -->
+<table class="vehicle-table">
+  <thead>
+    <tr>
+      <th>ID</th> <!-- Identificador único del vehículo -->
+      <th>Nombre</th> <!-- Nombre del vehículo -->
+      <th>Marca</th> <!-- Marca del vehículo -->
+      <th>Modelo</th> <!-- Modelo del vehículo -->
+      <th>Descripción</th> <!-- Descripción breve del vehículo -->
+      <th>Precio</th> <!-- Precio del vehículo -->
+      <th>Stock</th> <!-- Cantidad disponible en inventario -->
+      <th>Acciones</th> <!-- Opciones para modificar o eliminar el vehículo -->
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Iteración sobre la lista de vehículos filtrados utilizando @for -->
+    @for (vehiculo of vehiculosFiltrados; track vehiculo.idVehiculo) {
+      <tr>
+        <td>{{ vehiculo.idVehiculo }}</td> <!-- Muestra el ID del vehículo -->
+        <td>{{ vehiculo.nombre }}</td> <!-- Muestra el nombre del vehículo -->
+        <td>{{ vehiculo.marca }}</td> <!-- Muestra la marca del vehículo -->
+        <td>{{ vehiculo.modelo }}</td> <!-- Muestra el modelo del vehículo -->
+        <td>{{ vehiculo.descripcion }}</td> <!-- Muestra la descripción del vehículo -->
+        <td>{{ vehiculo.precio }}</td> <!-- Muestra el precio del vehículo -->
+        <td>{{ vehiculo.stock }}</td> <!-- Muestra el stock disponible -->
+        <td>
+          <!-- Botón para modificar el vehículo -->
+          <button class="edit-button" (click)="modificarVehiculo(vehiculo.idVehiculo)">
+            Modificar
+          </button>
+          <!-- Botón para eliminar el vehículo -->
+          <button class="delete-button" (click)="eliminarVehiculo(vehiculo.idVehiculo)">
+            Eliminar
+          </button>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>

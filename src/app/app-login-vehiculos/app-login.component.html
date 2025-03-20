@@ -1,0 +1,56 @@
+<!-- 
+  @component LoginComponent
+  @description Formulario de inicio de sesión para los usuarios del sistema.
+-->
+
+<main>
+  <div class="login-container">
+
+    <!-- @title Título del formulario -->
+    <h2>Inicio Sesión</h2>
+
+    <!-- 
+      @section Formulario de Inicio de Sesión
+      @description Permite a los usuarios ingresar sus credenciales para autenticarse en el sistema.
+      @event (ngSubmit) Llama a la función onSubmit() al enviar el formulario.
+    -->
+    <form id="login-form" (ngSubmit)="onSubmit()">
+
+      <!-- 
+        @input Campo de texto para el nombre de usuario
+        @binding [(ngModel)]="username"
+        @required Sí
+      -->
+      <div class="input-group">
+        <label for="username">Usuario</label>
+        <input type="text" id="username" name="username" [(ngModel)]="username" required>
+      </div>
+
+      <!-- 
+        @input Campo de contraseña para autenticación
+        @binding [(ngModel)]="password"
+        @required Sí
+      -->
+      <div class="input-group">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" [(ngModel)]="password" required>
+      </div>
+
+      <!-- 
+        @button Botón para enviar el formulario de inicio de sesión
+        @description Permite al usuario autenticarse en el sistema.
+      -->
+      <button type="submit" class="login-button">Iniciar Sesión</button>
+
+    </form>
+
+    <!-- 
+      @link Enlace para recuperar contraseña
+      @description Permite a los usuarios recuperar su contraseña en caso de olvido.
+    -->
+    <div class="forgot-password">
+      <a>¿Has olvidado tu contraseña?</a>
+    </div>
+
+  </div>
+</main>

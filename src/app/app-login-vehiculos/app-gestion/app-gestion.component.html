@@ -1,0 +1,97 @@
+<!-- 
+  @component GestionVehiculosComponent
+  @description Página principal de la gestión de vehículos.
+  Permite realizar búsquedas, agregar nuevos vehículos y visualizar la lista de vehículos disponibles.
+-->
+
+<main>
+  <div class="management-container">
+
+    <!-- 
+      @section Cerrar Sesión 
+      @description Contenedor con el botón para cerrar sesión.
+    -->
+    <div class="logout-container">
+      <button type="button" class="logout-button" (click)="cerrarSesion()">
+        Cerrar Sesión
+      </button>
+    </div>
+
+    <!-- @title Título principal de la página -->
+    <h2>Gestión de Vehículos</h2>
+
+    <!-- 
+      @section Barra de Búsqueda 
+      @description Permite buscar vehículos por nombre o ID.
+    -->
+    <div class="search-bar">
+
+      <!-- @input Campo de búsqueda por nombre -->
+      <input type="text" 
+             id="search" 
+             placeholder="Buscar vehículo..." 
+             [(ngModel)]="searchTerm" 
+             (keyup.enter)="buscarVehiculos()">
+      
+      <!-- @button Botón para ejecutar la búsqueda por nombre -->
+      <button type="submit" 
+              id="search-button" 
+              class="search-button" 
+              (click)="buscarVehiculos()">
+        Buscar
+      </button>
+
+      <!-- @input Campo de búsqueda por ID -->
+      <input type="number" 
+             id="search-id" 
+             placeholder="Buscar por ID..." 
+             [(ngModel)]="searchId">
+      
+      <!-- @button Botón para ejecutar la búsqueda por ID -->
+      <button type="submit" 
+              id="search-id-button" 
+              class="search-button" 
+              (click)="buscarVehiculoPorId()">
+        Buscar
+      </button>
+    </div>
+
+    <!-- 
+      @section Agregar Vehículo y generar reportes
+      @description Permite agregar un nuevo vehículo al sistema, además de generar pdfs de diferentes reportes
+    -->
+    <div class="button-section">
+      <button type="submit" 
+      class="add-user-button" 
+      routerLink="/vehiculos/register">
+          Agregar Vehículo
+      </button>
+      <div class="report">
+        <button class="report-button">Generar Reporte</button>
+        <div class="report-content">
+          <button (click)="generarReporteInventario()">Reporte de Inventario</button>
+          <button (click)="generarReporteHistorico()">Histórico de Precios</button>
+          <button (click)="generarReportePedido()">Reporte de Pedidos</button>
+          <button (click)="generarReporteVentas()">Ventas (Pérdida y Ganancias)</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 
+      @section Lista de Vehículos 
+      @description Componente que muestra la lista de vehículos filtrados.
+    -->
+    <app-gestion-lista-vehiculos 
+      [vehiculosFiltrados]="vehiculosFiltrados" 
+      (vehiculoActualizado)="cargarVehiculos()">
+    </app-gestion-lista-vehiculos>
+
+    <!-- 
+      @section Elemento decorativo 
+      @description Rectángulo decorativo sin funcionalidad interactiva.
+    -->
+    <div class="rectangle" aria-hidden="true"></div>
+
+  </div>
+</main>

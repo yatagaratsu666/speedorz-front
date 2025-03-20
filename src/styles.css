@@ -1,0 +1,26 @@
+body {
+    /* Elimina el relleno predeterminado del cuerpo */
+    padding: 0;
+    
+    /* Ajusta el fondo para que cubra toda la pantalla */
+    background-size: 100% 100%;
+    
+    /* Establece la fuente principal del documento */
+    font-family: Arial, sans-serif;
+    
+    /* Mantiene la imagen de fondo fija al hacer scroll */
+    background-attachment: fixed;
+    
+    /* Define un margen superior para el contenido del cuerpo */
+    margin-top: 35px;
+    
+    /* Establece un color de fondo gris claro */
+    background-color: #f3f3f3;
+}
+
+/* Estilos generales para todos los elementos */
+* {
+    /* Elimina márgenes y rellenos predeterminados en todos los elementos */
+    margin: 0;    
+    padding: 0;
+}    

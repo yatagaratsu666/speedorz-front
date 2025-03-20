@@ -1,0 +1,80 @@
+/* Contenedor principal del formulario de modificación */
+.modify-container {
+    background-color: white; /* Fondo blanco */
+    padding: 4rem; /* Espaciado interno */
+    margin: 70px auto 40px auto; /* Centra el contenedor horizontalmente y define márgenes */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para efecto de elevación */
+    width: 30%; /* Ancho del contenedor */
+    display: block; /* Se mantiene como un bloque */
+    margin-top: 100px; /* Espaciado superior adicional */
+}
+
+/* Estilo para el título dentro del contenedor */
+.modify-container h2 {
+    margin-bottom: 2.2rem; /* Espacio debajo del título */
+    border-bottom: 1.5px solid #b8b8b8; /* Línea inferior para separación visual */
+    padding-bottom: 1.2rem; /* Espaciado inferior dentro del título */
+    font-size: 2rem; /* Tamaño de fuente */
+    text-align: justify; /* Alineación justificada */
+    color: #555; /* Color del texto */
+}
+
+/* Estilo para los grupos de entrada */
+.input-group {
+    margin-bottom: 2rem; /* Espaciado inferior entre grupos */
+    text-align: left; /* Alineación del contenido a la izquierda */
+}
+
+/* Estilo para las etiquetas de los campos de entrada */
+.input-group label {
+    display: block; /* Coloca la etiqueta en su propia línea */
+    font-weight: bold; /* Texto en negrita */
+    margin-bottom: 0.5rem; /* Espacio entre la etiqueta y el campo de entrada */
+    color: #8b8b8b; /* Color del texto */
+}
+
+/* Estilo para los selectores desplegables */
+.input-group select {
+    width: 100%; /* Ocupa todo el ancho del grupo */
+    padding: 0.55rem; /* Espaciado interno */
+    border: 1px solid #939393; /* Borde de color gris */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+    box-sizing: border-box; /* Evita que el padding afecte el tamaño total */
+}
+
+/* Estilo para los campos de entrada de texto */
+.input-group input {
+    width: 96%; /* Ocupa la mayor parte del ancho disponible */
+    padding: 0.5rem; /* Espaciado interno */
+    border: 1px solid #939393; /* Borde gris */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+}
+
+/* Estilo para el botón de modificación */
+.modify-button {
+    background-color: #99bada; /* Color de fondo azul claro */
+    color: whitesmoke; /* Color del texto blanco humo */
+    border: none; /* Sin bordes */
+    padding: 0.75rem; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+    transition: background-color 0.3s; /* Transición suave en el cambio de color */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+}
+
+/* Efecto al pasar el cursor sobre el botón */
+.modify-button:hover {
+    background-color: #738ca5; /* Color de fondo más oscuro */
+}
+
+/* Línea divisoria */
+.rectangle {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 0.5px; /* Altura mínima */
+    margin-top: 1.9rem; /* Espaciado superior */
+    background: #b8b8b8; /* Color gris */
+    border: 0; /* Sin borde adicional */
+    border-radius: 0; /* Sin bordes redondeados */
+}

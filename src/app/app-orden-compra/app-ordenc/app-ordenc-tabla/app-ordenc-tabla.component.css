@@ -1,0 +1,70 @@
+.tables-container {
+    display: flex;
+    gap: 20px;
+    align-items: start;
+}
+
+.impuesto-table {
+    width: 29%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    table-layout: fixed;
+}
+
+.user-table {
+    width: 47%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    table-layout: fixed;
+}
+
+.impuesto-table th, .impuesto-table td {
+    font-size: 14px;
+    border: 1px solid #999999;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 17px;
+}
+
+.impuesto-table,
+.user-table {
+    border-collapse: collapse;
+}
+
+.impuesto-table th {
+    background-color: #c7c7c7;
+    font-weight: bold;
+    color: #555;
+}
+
+.impuesto-table td {
+    background-color: #e7e7e7;
+    font-weight: bold;
+    color: #555;
+}
+
+.user-table th, .user-table td {
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid #cdcdcd;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 9.5px;
+}
+
+.user-table th {
+    background-color: #eaeaea;
+    font-weight: bold;
+    color: #555;
+}
+
+.user-table td input{
+    width: 50%;
+    background-color: transparent !important;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}

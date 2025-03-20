@@ -1,0 +1,39 @@
+<body>
+    <div class="container">
+        <h2>GESTIÓN DE IMPUESTOS</h2>
+
+        <!-- Contenedor del subtítulo y botón "Agregar" -->
+        <div class="header">
+            <h3>Impuestos Activos</h3>
+            <button (click)="agregarImpuesto()" class="agregar-btn">Agregar Impuesto</button>
+        </div>
+
+        <table class="Impuestos-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Porcentaje</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Iteración sobre la lista de impuestos -->
+              @for (impuesto of impuestos; track impuestoId) {
+                <tr>
+                  <td>{{ impuesto.id }}</td>
+                  <td>{{ impuesto.nombre }}</td> 
+                  <td>{{ impuesto.descripcion }}</td> 
+                  <td>{{ impuesto.porcentaje }}%  </td>
+                  <td>
+                    <!-- Botón para modificar el usuario -->
+                    <button (click)="modificarImpuesto(impuesto.id)" class="modificar-btn">Modificar Impuesto</button>
+                    <button (click)="eliminarImpuesto(impuesto.id)" class="dar-baja-btn">Eliminar Impuesto</button>
+                  </td>
+                </tr>
+              }
+            </tbody>
+        </table>
+    </div>
+</body>

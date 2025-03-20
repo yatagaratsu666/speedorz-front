@@ -1,0 +1,136 @@
+/*  
+  @file styles.css
+  @description Estilos para la página de inicio de sesión.
+*/
+
+/*  
+  @section Contenedor principal
+  @description Establece el diseño del <main> para centrar el contenido en la pantalla.
+*/
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/*  
+  @section Contenedor del formulario de inicio de sesión
+  @description Define los estilos del contenedor del formulario, incluyendo tamaño, sombras y alineación.
+*/
+.login-container {
+    background-color: white;
+    padding: 4rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el formulario dentro del contenedor */
+}
+
+/*  
+  @section Título del formulario
+  @description Estilos para el título del formulario, incluyendo fuente y subrayado.
+*/
+.login-container h2 {
+    margin-bottom: 2.2rem;
+    border-bottom: 1.5px solid #b8b8b8;
+    padding-bottom: 1.2rem;
+    font-size: 2rem;
+    text-align: justify;
+    color: #555;
+}
+
+/*  
+  @section Grupos de entrada
+  @description Define el espacio y alineación de los grupos de entrada dentro del formulario.
+*/
+.input-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+/*  
+  @section Etiquetas de entrada
+  @description Estiliza las etiquetas de los campos del formulario.
+*/
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #8b8b8b;
+}
+
+/*  
+  @section Campos de entrada
+  @description Estilos para los campos de entrada de texto y contraseña.
+*/
+.input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #939393;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/*  
+  @section Botón de inicio de sesión
+  @description Estiliza el botón de envío del formulario.
+*/
+.login-button {
+    display: inline-block;
+    background-color: #99bada;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/*  
+  @section Efecto hover en el botón
+  @description Cambia el color de fondo cuando el cursor pasa sobre el botón.
+*/
+.login-button:hover {
+    background-color: #738ca5;
+}
+
+/*  
+  @section Sección de "Olvidaste tu contraseña"
+  @description Define el estilo del contenedor del enlace para recuperar contraseña.
+*/
+.forgot-password {
+    border-bottom: 1px solid #b8b8b8;
+    padding-bottom: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+/*  
+  @section Enlace de recuperación de contraseña
+  @description Estiliza el enlace de "¿Has olvidado tu contraseña?".
+*/
+.forgot-password a {
+    color: #4a4a4a;
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/*  
+  @section Efecto hover en el enlace
+  @description Cambia el color del enlace al pasar el cursor sobre él.
+*/
+.forgot-password a:hover {
+    color: #738ca5;
+}

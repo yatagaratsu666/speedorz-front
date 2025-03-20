@@ -1,0 +1,156 @@
+/* 
+    Estilo para el elemento <main>, que actúa como contenedor principal de la página.
+    Se usa `display: flex` para centrar el contenido en la pantalla tanto horizontal como verticalmente.
+    `height: 100vh` asegura que el contenido ocupe toda la altura de la ventana del navegador.
+*/
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* 
+    Estilo para el contenedor del formulario de inicio de sesión.
+    Se establece un fondo blanco, un padding generoso y un borde redondeado para mejorar la estética.
+    La sombra `box-shadow` agrega profundidad al contenedor.
+    Se usa `max-width` para evitar que el formulario sea demasiado ancho en pantallas grandes.
+    `display: flex` y `flex-direction: column` organizan los elementos en una columna.
+*/
+.login-container {
+    background-color: white;
+    padding: 4rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el formulario dentro del contenedor */
+}
+
+/* 
+    Estilo para el título del formulario (h2).
+    Se agrega un margen inferior para separación y una línea de borde en la parte inferior.
+    `text-align: justify` alinea el texto uniformemente.
+    Se usa un color gris oscuro (#555) para mejorar la lectura.
+*/
+.login-container h2 {
+    margin-bottom: 2.2rem;
+    border-bottom: 1.5px solid #b8b8b8;
+    padding-bottom: 1.2rem;
+    font-size: 2rem;
+    text-align: justify;
+    color: #555;
+}
+
+/* 
+    Estilo para los grupos de entradas del formulario.
+    Se agrega un margen inferior para separación.
+    `text-align: left` alinea los elementos a la izquierda dentro del grupo.
+*/
+.input-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+/* 
+    Estilo para las etiquetas de los campos de entrada.
+    Se usa `display: block` para que cada etiqueta ocupe su propia línea.
+    Se aplica `font-weight: bold` para resaltar la etiqueta y `margin-bottom` para separación.
+    Se usa un color gris claro para diferenciarlas del contenido del input.
+*/
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #8b8b8b;
+}
+
+/* 
+    Estilo para los campos de entrada del formulario.
+    `width: 100%` garantiza que el input ocupe todo el ancho disponible.
+    `padding` proporciona espacio interno para mejorar la legibilidad del texto ingresado.
+    Se usa un borde de 1px con un color gris oscuro para mayor visibilidad.
+    `border-radius: 5px` suaviza las esquinas del campo de entrada.
+    `box-sizing: border-box` evita que el padding afecte el ancho total del input.
+*/
+.input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #939393;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* 
+    Estilo para el botón de inicio de sesión.
+    `display: inline-block` permite que se comporte como un botón pero con flexibilidad de tamaño.
+    `background-color: #99bada` le da un color azul claro.
+    `color: white` asegura que el texto sea legible.
+    `border: none` elimina el borde predeterminado.
+    `width: 100%` hace que el botón ocupe todo el ancho disponible.
+    `padding` y `border-radius` mejoran la apariencia.
+    `cursor: pointer` cambia el cursor a una mano al pasar sobre el botón.
+    `transition: background-color 0.3s` agrega una animación suave en el hover.
+*/
+.login-button {
+    display: inline-block;
+    background-color: #99bada;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* 
+    Efecto `hover` para el botón de inicio de sesión.
+    Cambia el color de fondo a un tono más oscuro al pasar el mouse sobre él.
+*/
+.login-button:hover {
+    background-color: #738ca5;
+}
+
+/* 
+    Estilo para el contenedor de "¿Olvidaste tu contraseña?".
+    Se agrega un borde inferior y un `padding-bottom` para separación.
+    `text-align: center` centra el texto.
+    `margin-top: 1rem` da un pequeño espacio con los elementos anteriores.
+    `cursor: pointer` indica que es un elemento interactivo.
+*/
+.forgot-password {
+    border-bottom: 1px solid #b8b8b8;
+    padding-bottom: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+/* 
+    Estilo para el enlace dentro de "¿Olvidaste tu contraseña?".
+    Se usa un color gris oscuro (#4a4a4a) y un tamaño de fuente reducido.
+    `text-decoration: none` elimina el subrayado predeterminado.
+    `font-weight: 500` hace que el texto sea ligeramente más grueso para mejorar la legibilidad.
+*/
+.forgot-password a {
+    color: #4a4a4a;
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* 
+    Efecto `hover` para el enlace "¿Olvidaste tu contraseña?".
+    Cambia el color del texto a un azul más oscuro al pasar el mouse sobre él.
+*/
+.forgot-password a:hover {
+    color: #738ca5;
+}

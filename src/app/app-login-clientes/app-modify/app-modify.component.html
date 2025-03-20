@@ -1,0 +1,36 @@
+<!-- Contenedor principal que aloja el formulario -->
+<div class="container">
+  <!-- Caja de contenido donde se muestra el formulario de modificación -->
+  <div class="content-box">
+    <!-- Título del formulario -->
+    <h2>Modificar Información de Cliente</h2>
+
+    <!-- Campo de entrada para el ID del cliente (solo lectura) -->
+    <label for="idCliente">ID del Cliente</label>
+    <input type="text" id="idCliente" placeholder="ID del Cliente" [(ngModel)]="cliente.idCliente" readonly>
+
+    <!-- Campo de entrada para el nombre completo del cliente -->
+    <label for="nombreCliente">Nombre completo del Cliente</label>
+    <input type="text" id="nombreCliente" placeholder="Nombre completo del Cliente" [(ngModel)]="cliente.nombreLegal">
+
+    <!-- Campo de entrada para el documento de identidad (solo lectura) -->
+    <label for="documentoCliente">Documento de Identidad</label>
+    <input type="text" id="documentoCliente" placeholder="Documento de Identidad" [(ngModel)]="cliente.numeroIdentificacion" readonly>
+
+    <!-- Campo de entrada para el número de teléfono del cliente -->
+    <label for="telefonoCliente">Número de Teléfono</label>
+    <input type="text" id="telefonoCliente" placeholder="Número de Teléfono" [(ngModel)]="cliente.telefono">
+
+    <!-- Campo de entrada para la dirección del cliente -->
+    <label for="direccionCliente">Dirección</label>
+    <input type="text" id="direccionCliente" placeholder="Dirección" [(ngModel)]="cliente.direccion">
+
+    <!-- Grupo de botones para acciones del formulario -->
+    <div class="button-group">
+      <!-- Botón para aceptar y guardar los cambios -->
+      <button class="btn aceptar" (click)="guardarCambios()">Aceptar Cambios</button>
+      <!-- Botón para eliminar al cliente -->
+      <button class="btn eliminar" (click)="eliminarCliente()">Eliminar Cliente</button>
+    </div>
+  </div>
+</div>

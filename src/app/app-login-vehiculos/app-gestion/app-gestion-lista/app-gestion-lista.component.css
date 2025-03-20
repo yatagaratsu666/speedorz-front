@@ -1,0 +1,88 @@
+/* Estilos para los inputs dentro del formulario */
+.input-group {
+    margin-bottom: 1rem; /* Espaciado inferior entre grupos de inputs */
+    text-align: left; /* Alineación del texto a la izquierda */
+}
+
+.input-group label {
+    font-weight: bold; /* Texto en negrita para etiquetas */
+    color: #333; /* Color oscuro para mayor contraste */
+}
+
+.input-group input {
+    width: 100%; /* El input ocupa todo el ancho disponible */
+    padding: 0.75rem; /* Espaciado interno para mejor usabilidad */
+    border: 1px solid #ccc; /* Borde sutil en color gris */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente estándar */
+}
+
+/* Estilos para los botones dentro del modal */
+.modal-buttons {
+    display: flex; /* Alineación flexible */
+    justify-content: space-between; /* Distribución equitativa de los botones */
+    margin-top: 1rem; /* Espaciado superior */
+}
+
+/* Estilos para el botón de edición */
+.edit-button {
+    background-color: #f8b400; /* Color amarillo */
+    color: white; /* Texto en color blanco */
+    padding: 0.75rem 1.5rem; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor en forma de puntero */
+}
+
+.edit-button:hover {
+    background-color: #f08d00; /* Cambio de color en hover */
+}
+
+/* Estilos para el botón de eliminación */
+.delete-button {
+    background-color: #f44336; /* Color rojo */
+    color: white; /* Texto en color blanco */
+    padding: 0.75rem 1.5rem; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor en forma de puntero */
+}
+
+.delete-button:hover {
+    background-color: #d32f2f; /* Cambio de color en hover */
+}
+
+/* Estilos para la tabla de vehículos */
+.vehicle-table {
+    width: 100%; /* La tabla ocupa todo el ancho disponible */
+    border-collapse: collapse; /* Fusiona los bordes de las celdas */
+    margin-top: 1.5rem; /* Espaciado superior */
+    table-layout: fixed; /* Distribución uniforme de las columnas */
+}
+
+.vehicle-table th, .vehicle-table td {
+    font-size: 12px; /* Tamaño de fuente reducido */
+    border: 1px solid #cdcdcd; /* Borde de celda en color gris */
+    text-align: center; /* Alineación central del texto */
+    word-wrap: break-word; /* Permite el ajuste de palabras largas */
+    overflow-wrap: break-word; /* Alternativa para ajuste de palabras */
+}
+
+/* Estilos para los encabezados de la tabla */
+.vehicle-table th {
+    background-color: #eaeaea; /* Color de fondo gris claro */
+    font-weight: bold; /* Texto en negrita */
+    color: #555; /* Color de texto gris oscuro */
+    padding: 5px; /* Espaciado interno */
+}
+
+/* Estilos para los botones dentro de la tabla */
+.vehicle-table td button {
+    padding: 0.5rem; /* Espaciado interno */
+    margin: 0.5rem; /* Margen entre botones */
+    width: 80%; /* Ancho relativo */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor en forma de puntero */
+    transition: background-color 0.3s; /* Transición suave en hover */
+}

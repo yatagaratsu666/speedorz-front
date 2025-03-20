@@ -1,0 +1,95 @@
+/* Contenedor principal que centra el contenido en la página */
+.container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 100%;
+}
+
+/* Caja de contenido donde se aloja el formulario */
+.content-box {
+    background-color: white; /* Fondo blanco */
+    padding: 3rem; /* Espaciado interno */
+    margin-top: 70px; /* Margen superior */
+    margin-bottom: 40px; /* Margen inferior */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    width: 35%; /* Ancho relativo */
+    max-width: 600px; /* Máximo ancho permitido */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Estilos para el título dentro de la caja de contenido */
+.content-box h2 {
+    margin-bottom: 2rem; /* Espaciado inferior */
+    border-bottom: 1.5px solid #b8b8b8; /* Línea separadora debajo del título */
+    padding-bottom: 1rem; /* Espaciado inferior */
+    font-size: 1.8rem; /* Tamaño de fuente */
+    text-align: justify; /* Alineación del texto */
+    color: #555; /* Color del texto */
+}
+
+/* Estilo para las etiquetas de los campos de entrada */
+label {
+    display: block; /* Muestra la etiqueta en una nueva línea */
+    font-weight: bold; /* Texto en negrita */
+    margin-top: 1rem; /* Margen superior */
+    margin-bottom: 0.7rem; /* Margen inferior */
+    color: #8b8b8b; /* Color del texto */
+}
+
+/* Estilo para los campos de entrada */
+input {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 0.6rem; /* Espaciado interno */
+    border: 1px solid #939393; /* Borde con color gris */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+}
+
+/* Contenedor de los botones para organizar su disposición */
+.button-group {
+    display: flex;
+    justify-content: space-between; /* Distribuye los botones en los extremos */
+    margin-top: 2rem; /* Margen superior */
+}
+
+/* Estilos generales para los botones */
+.btn {
+    border: none; /* Sin bordes */
+    padding: 0.75rem 1.5rem; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor a tipo puntero */
+    transition: background-color 0.3s ease-in-out; /* Efecto de transición */
+}
+
+/* Estilos específicos para el botón de aceptar cambios */
+.aceptar {
+    background-color: #99bada; /* Color de fondo */
+    color: whitesmoke; /* Color del texto */
+}
+
+.aceptar:hover {
+    background-color: #738ca5; /* Cambio de color al pasar el cursor */
+}
+
+/* Estilos específicos para el botón de eliminar cliente */
+.eliminar {
+    background-color: #d9534f; /* Color de fondo */
+    color: whitesmoke; /* Color del texto */
+}
+
+.eliminar:hover {
+    background-color: #b52b27; /* Cambio de color al pasar el cursor */
+}
+
+/* Línea separadora utilizada como divisor */
+.rectangle {
+    width: 100%; /* Ocupa todo el ancho */
+    height: 1px; /* Altura de la línea */
+    margin-top: 1.9rem; /* Margen superior */
+    background: #b8b8b8; /* Color de la línea */
+    border: 0; /* Sin bordes */
+    border-radius: 0; /* Sin redondeo */
+}

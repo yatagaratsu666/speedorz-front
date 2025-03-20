@@ -1,0 +1,75 @@
+/* Contenedor principal que centra el contenido en la página */
+.container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  width: 100%;
+}
+
+/* Caja de contenido donde se aloja el formulario */
+.content-box {
+  background-color: white; /* Fondo blanco */
+  padding: 3rem; /* Espaciado interno */
+  margin-top: 70px; /* Margen superior */
+  margin-bottom: 40px; /* Margen inferior */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
+  width: 35%; /* Ancho del contenedor */
+  max-width: 600px; /* Ancho máximo */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Estilo del título dentro de la caja de contenido */
+.content-box h2 {
+  margin-bottom: 2rem; /* Espaciado inferior */
+  border-bottom: 1.5px solid #b8b8b8; /* Línea inferior */
+  padding-bottom: 1rem; /* Espaciado interno */
+  font-size: 1.8rem; /* Tamaño de fuente */
+  text-align: justify; /* Alineación del texto */
+  color: #555; /* Color del texto */
+}
+
+/* Estilo para cada grupo de entrada del formulario */
+.input-group {
+  margin-bottom: 1rem; /* Espaciado inferior */
+  text-align: left; /* Alineación del contenido */
+  margin-bottom: 30px; /* Espaciado inferior adicional */
+}
+
+/* Estilo de las etiquetas de los campos de entrada */
+.input-group label {
+  display: block; /* Se muestra en una nueva línea */
+  font-weight: bold; /* Texto en negrita */
+  margin-bottom: 0.5rem; /* Espaciado inferior */
+  color: #8b8b8b; /* Color del texto */
+}
+
+/* Estilo para los campos de entrada de texto */
+.input-group input {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  padding: 0.75rem; /* Espaciado interno */
+  border: 1px solid #939393; /* Borde del campo */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 1rem; /* Tamaño del texto */
+  box-sizing: border-box; /* Ajusta el tamaño incluyendo el borde */
+}
+
+/* Estilo del botón de registro */
+.register-btn {
+  display: inline-block; /* Se comporta como un bloque en línea */
+  background-color: #99bada; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  width: 35%; /* Ancho del botón */
+  padding: 0.75rem; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  text-decoration: none; /* Sin subrayado */
+  font-size: 1rem; /* Tamaño del texto */
+  margin-top: 0.5rem; /* Espaciado superior */
+  cursor: pointer; /* Cursor tipo puntero */
+  transition: background-color 0.3s; /* Efecto de transición al cambiar el color */
+}
+
+/* Estilo del botón de registro cuando el cursor está encima */
+.register-btn:hover {
+  background-color: #738ca5; /* Cambio de color al pasar el cursor */
+}

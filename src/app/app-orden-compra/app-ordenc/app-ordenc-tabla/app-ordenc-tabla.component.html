@@ -1,0 +1,68 @@
+<div class="tables-container">
+    <table class="impuesto-table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Impuesto</th>
+            <th>Porcentaje</th>
+          </tr>
+        </thead>
+        <tbody>
+        @for (impuesto of impuestos; track impuesto.id) {
+          <tr>
+            <td  id="id_imp" class="id_impuesto">{{impuesto.id}}</td>
+            <td  id="nom_imp" class="nombre_impuesto">{{impuesto.nombre}}</td>
+            <td id="porc_imp" class="porcentaje_impuesto">{{impuesto.porcentaje}}%</td>
+          </tr>
+        }
+        </tbody>
+    </table>   
+
+    <table class="user-table">
+        <thead>
+          <tr>
+            <th>Nombre Vehículo</th>
+            <th>Stock</th>
+            <th>Cantidad</th>
+            <th>Impuestos</th>
+            <th>Descuesto</th>
+          </tr>
+        </thead>
+        <tbody>
+        @for (vehiculo of vehiculos; track vehiculo.idVehiculo) {
+          <tr>
+            <td  id="vehiculo" class="nombre-vehiculo">{{vehiculo.nombre}}</td>
+            <td   id="stock" class="nombre-stock">{{vehiculo.stock}}</td>
+            <td>
+              <input type="number" class="input-box-cantidad" placeholder="Cantidad" (change)="actualizarOrden()">
+            </td>
+            <td>
+              <input type="text" class="input-box-impuestos" placeholder="IDs Impuestos (ej: 1,2)" (change)="actualizarOrden()">
+            </td>
+            <td>
+              <input type="text" class="input-box-descuentos" placeholder="IDs Descuentos (ej: 3,4)" (change)="actualizarOrden()">
+            </td>
+          </tr>
+        }
+        </tbody>
+      </table>    
+
+    <table class="impuesto-table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Descuento</th>
+            <th>Porcentaje</th>
+          </tr>
+        </thead>
+        <tbody>
+        @for (descuento of descuentos; track descuento.id) {
+          <tr>
+            <td  id="id_des" class="id_descuento">{{descuento.id}}</td>
+            <td  id="nom_des" class="nombre_descuento">{{descuento.nombre}}</td>
+            <td id="porc_des" class="porcentaje_descuento">{{descuento.porcentaje}}%</td>
+          </tr>
+        }
+        </tbody>
+    </table>   
+</div>

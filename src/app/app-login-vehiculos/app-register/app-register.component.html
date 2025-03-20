@@ -1,0 +1,63 @@
+<!-- 
+  @component RegistroVehiculoComponent
+  @description Formulario para registrar un nuevo vehículo en el sistema.
+-->
+
+<main>
+  <div class="register-container">
+
+    <!-- @title Título del formulario -->
+    <h2>Registro de Vehículo</h2>
+
+    <!-- 
+      @section Formulario de Registro
+      @description Permite ingresar los datos de un nuevo vehículo y enviarlos al sistema.
+      @event (ngSubmit) Llama a la función registerVehicle() cuando se envía el formulario.
+    -->
+    <form (ngSubmit)="registerVehicle()">
+
+      <!-- @input Campo para el nombre del vehículo -->
+      <div class="input-group">
+        <label>Nombre</label>
+        <input type="text" [(ngModel)]="vehicle.nombre" name="nombre" required>
+      </div>
+
+      <!-- @input Campo para la marca del vehículo (solo lectura) -->
+      <div class="input-group">
+        <label>Marca</label>
+        <input type="text" [(ngModel)]="vehicle.marca" name="marca" readonly>
+      </div>
+
+      <!-- @input Campo para el modelo del vehículo -->
+      <div class="input-group">
+        <label>Modelo</label>
+        <input type="text" [(ngModel)]="vehicle.modelo" name="modelo" required>
+      </div>
+
+      <!-- @textarea Campo para la descripción del vehículo -->
+      <div class="input-group">
+        <label>Descripción</label>
+        <textarea [(ngModel)]="vehicle.descripcion" name="descripcion" required></textarea>
+      </div>
+
+      <!-- @input Campo para la cantidad en stock -->
+      <div class="input-group">
+        <label>Stock</label>
+        <input type="number" [(ngModel)]="vehicle.stock" name="stock" required>
+      </div>
+
+      <!-- @input Campo para el precio del vehículo -->
+      <div class="input-group">
+        <label>Precio</label>
+        <input type="number" [(ngModel)]="vehicle.precio" name="precio" required>
+      </div>
+
+      <!-- 
+        @button Botón para enviar el formulario
+        @description Registra el vehículo en el sistema.
+      -->
+      <button type="submit" class="register-button">Registrar</button>
+
+    </form>
+  </div>
+</main>

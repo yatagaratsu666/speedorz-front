@@ -1,0 +1,52 @@
+<!--
+  @file GestionUsuarios.html
+  @description Tabla de usuarios que muestra información detallada sobre cada usuario registrado en el sistema.
+  Incluye opciones para modificar, cambiar estado y eliminar usuarios.
+-->
+
+
+<table class="user-table">
+  <thead>
+    <tr>
+      <th>ID</th> <!-- Identificador único del usuario -->
+      <th>Nombre Completo</th> <!-- Nombre completo del usuario -->
+      <th>Usuario</th> <!-- Nombre de usuario en el sistema -->
+      <th>Cédula</th> <!-- Número de cédula del usuario -->
+      <th>Dirección</th> <!-- Dirección del usuario -->
+      <th>Rol</th> <!-- Rol del usuario dentro del sistema -->
+      <th>Teléfono</th> <!-- Número de teléfono del usuario -->
+      <th>Estado</th> <!-- Estado actual del usuario (ACTIVO/INACTIVO) -->
+      <th>Acciones</th> <!-- Opciones para modificar, cambiar estado o eliminar usuario -->
+    </tr>
+  </thead>
+  <tbody>
+    <tbody>
+      <!--
+        @for (usuario of usuariosFiltrados; track usuario.idUsuario)
+        Itera sobre la lista de usuarios filtrados y muestra cada uno en una fila de la tabla.
+      -->
+      <!-- Utilizando @for en lugar de *ngFor -->
+      @for (usuario of usuariosFiltrados; track usuario.idUsuario) {
+        <tr>
+          <td>{{ usuario.idUsuario }}</td> <!-- Muestra el ID del usuario -->
+          <td>{{ usuario.nombreCompleto }}</td> <!-- Muestra el nombre completo -->
+          <td>{{ usuario.nombreUsuario }}</td> <!-- Muestra el nombre de usuario -->
+          <td>{{ usuario.cedula }}</td> <!-- Muestra la cédula del usuario -->
+          <td>{{ usuario.direccion }}</td> <!-- Muestra la dirección del usuario -->
+          <td>{{ usuario.rol }}</td> <!-- Muestra el rol del usuario -->
+          <td>{{ usuario.telefono }}</td> <!-- Muestra el teléfono del usuario -->
+          <td>{{ usuario.estado }}</td> <!-- Muestra el estado del usuario -->
+          <td>
+            <!-- Botón para modificar usuario -->
+            <button class="edit-button" (click)="modificarUsuario(usuario.idUsuario)">Modificar</button>
+            <!-- Botón para cambiar estado (Activar/Inactivar) -->
+            <button class="deactivate-button" (click)="cambiarEstadoUsuario(usuario.idUsuario, usuario.estado === 'ACTIVO' ? 'INACTIVO' : 'ACTIVO')">
+              {{ usuario.estado === 'ACTIVO' ? 'Inactivar' : 'Activar' }}
+            </button>
+            <!-- Botón para eliminar usuario -->
+            <button class="delete-button" (click)="eliminarUsuario(usuario.idUsuario)">Eliminar</button>
+          </td>
+        </tr>
+      }
+    </tbody>
+    

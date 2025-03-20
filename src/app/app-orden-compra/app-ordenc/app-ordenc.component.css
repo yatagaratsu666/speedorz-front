@@ -1,0 +1,99 @@
+/* 
+   Estilos principales para la página de gestión de órdenes de compra 
+*/
+
+/* Estiliza el contenedor principal */
+main {
+    display: flex; /* Usa flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 100%; /* Ocupar todo el ancho disponible */
+    margin-top: 100px; /* Espaciado superior */
+}
+
+/* Contenedor de la orden de compra */
+.orden-container {
+    background-color: white; /* Fondo blanco */
+    padding: 5rem; /* Espaciado interno */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 1200px; /* Ancho máximo */
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Alinea elementos en columna */
+    align-items: center; /* Centra los elementos */
+}
+
+/* Título de la orden de compra */
+.orden-container h2 {
+    margin-bottom: 3.5rem; /* Espaciado inferior */
+    border-bottom: 1.5px solid #b8b8b8; /* Línea divisoria */
+    padding-bottom: 1.2rem; /* Espaciado interno inferior */
+    font-size: 2rem; /* Tamaño de fuente grande */
+    width: 100%; /* Ocupar todo el ancho */
+    text-align: justify; /* Justificar el texto */
+    color: #555; /* Color de texto */
+}
+
+/* Contenedor de tablas */
+.tables-container {
+    display: flex; /* Usa flexbox */
+    gap: 20px; /* Espaciado entre elementos */
+    align-items: start; /* Alinea los elementos al inicio */
+}
+
+/* Botón para guardar la orden */
+.guardar-button {
+    background-color: #99bada; /* Color de fondo */
+    color: whitesmoke; /* Color del texto */
+    border: none; /* Sin borde */
+    width: 20%; /* Ancho relativo */
+    padding: 0.75rem; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+    transition: background-color 0.3s; /* Transición suave */
+    cursor: pointer; /* Cursor en forma de mano */
+    margin-top: 30px; /* Espaciado superior */
+    margin-bottom: 28px; /* Espaciado inferior */
+}
+
+/* Cambia el color de fondo del botón al pasar el cursor */
+.guardar-button:hover {
+    background-color: #738ca5;
+}
+
+/* Línea divisoria decorativa */
+.rectangle {
+    width: 100%; /* Ocupar todo el ancho */
+    height: 0.5px; /* Altura mínima */
+    margin-top: 1.2rem; /* Espaciado superior */
+    background: #b8b8b8; /* Color de la línea */
+    border: 0;
+    border-radius: 0;
+}
+
+/* Contenedor de los campos de entrada para IDs */
+.id-inputs {
+    margin-bottom: 0.5rem; /* Espaciado inferior */
+    display: flex; /* Usa flexbox */
+    justify-content: flex-start; /* Alinea a la izquierda */
+    align-items: center; /* Alinea verticalmente */
+    width: 100%; /* Ocupar todo el ancho */
+    gap: 20px; /* Espaciado entre elementos */
+}
+
+/* Estilo de los campos de entrada */
+.id-inputs input {
+    padding: 0.75rem; /* Espaciado interno */
+    width: 100%; /* Ocupar todo el ancho disponible */
+    font-size: 1rem; /* Tamaño de fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #939393; /* Borde con color gris */
+    box-sizing: border-box; /* Incluir padding y borde en el tamaño total */
+}
+
+/* Estilo de las etiquetas de los campos de entrada */
+.id-inputs label {
+    display: block; /* Mostrar como bloque */
+    font-weight: bold; /* Texto en negrita */
+    margin-bottom: 0.5rem; /* Espaciado inferior */
+    color: #8b8b8b; /* Color gris oscuro */
+}

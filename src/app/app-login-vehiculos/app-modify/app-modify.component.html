@@ -1,0 +1,64 @@
+<!-- 
+  @component ModificarVehiculoComponent
+  @description Sección de modificación de vehículos en la aplicación. 
+  Permite actualizar los detalles de un vehículo existente en el sistema.
+-->
+
+<div class="modify-container">
+  <div class="modify-container">
+    <h2>Modificar Vehículo</h2>
+
+    <!-- 
+      @section Formulario de modificación 
+      @description Formulario para modificar los datos de un vehículo. 
+      Solo se muestra si la variable 'vehiculo' está definida.
+    -->
+    <form *ngIf="vehiculo" (ngSubmit)="onSubmit()">
+      
+      <!-- @input Nombre del vehículo -->
+      <div class="input-group">
+        <label>Nombre</label>
+        <input type="text" [(ngModel)]="vehiculo.nombre" name="nombre" required>
+      </div>
+
+      <!-- @input Marca del vehículo (solo lectura) -->
+      <div class="input-group">
+        <label>Marca</label>
+        <input type="text" [(ngModel)]="vehiculo.marca" name="marca" readonly>
+      </div>
+
+      <!-- @input Modelo del vehículo -->
+      <div class="input-group">
+        <label>Modelo</label>
+        <input type="text" [(ngModel)]="vehiculo.modelo" name="modelo" required>
+      </div>
+
+      <!-- @input Descripción del vehículo -->
+      <div class="input-group">
+        <label>Descripción</label>
+        <textarea [(ngModel)]="vehiculo.descripcion" name="descripcion" required></textarea>
+      </div>
+
+      <!-- @input Precio del vehículo -->
+      <div class="input-group">
+        <label>Precio</label>
+        <input type="number" [(ngModel)]="vehiculo.precio" name="precio" required>
+      </div>
+
+      <!-- @input Stock disponible del vehículo -->
+      <div class="input-group">
+        <label>Stock</label>
+        <input type="number" [(ngModel)]="vehiculo.stock" name="stock" required>
+      </div>
+
+      <!-- 
+        @section Botón de guardado 
+        @description Guarda los cambios realizados en el formulario.
+      -->
+      <div class="modify-buttons">
+        <button type="submit" class="save-button">Guardar</button>
+      </div>
+      
+    </form>
+  </div>
+</div>

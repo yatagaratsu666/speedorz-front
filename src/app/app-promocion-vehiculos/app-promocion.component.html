@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="content-box">
+        <h2>Muestra de Vehículos</h2>
+        
+        @for (vehiculo of vehiculos; track vehiculo.nombre) {
+            <div class="vehicle-card">
+                <h3>{{ vehiculo.nombre }}</h3>
+                <p><strong>Marca:</strong> {{ vehiculo.marca }}</p>
+                <p><strong>Modelo:</strong> {{ vehiculo.modelo }}</p>
+                <p><strong>Descripción:</strong> {{ vehiculo.descripcion }}</p>
+                <p><strong>Stock:</strong> {{ vehiculo.stock }}</p>
+                <p><strong>Precio:</strong> ${{ vehiculo.precio }}</p>
+            </div>
+        }
+        
+    </div>
+</div>

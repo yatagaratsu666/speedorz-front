@@ -1,0 +1,166 @@
+/*
+  @file estilos-login.css
+  @description Estilos para la página de inicio de sesión, incluyendo el diseño del contenedor, formularios y botones.
+*/
+
+/* 
+  Estilos para el contenedor principal de la página.
+  - Se utiliza `display: flex` para centrar el contenido.
+  - `justify-content: center` y `align-items: center` posicionan el contenido en el centro de la pantalla.
+  - `height: 100vh` asegura que el contenedor ocupe toda la altura de la ventana.
+*/
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* 
+  Estilos para el contenedor del formulario de inicio de sesión.
+  - Fondo blanco para resaltar sobre el fondo general.
+  - Padding amplio para separar el contenido de los bordes.
+  - Bordes redondeados para un diseño más suave.
+  - Sombra sutil para dar efecto de elevación.
+  - Se limita el ancho máximo a 500px para mantener la estructura compacta.
+  - Uso de `display: flex` con `flex-direction: column` para organizar los elementos en columna.
+*/
+.login-container {
+    background-color: white;
+    padding: 4rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el formulario dentro del contenedor */
+}
+
+/* 
+  Estilos para el título del formulario.
+  - Se agrega un margen inferior para separación.
+  - Línea de borde en la parte inferior para dividir visualmente.
+  - Se establece un tamaño de fuente grande para resaltar el título.
+  - Se usa `text-align: justify` para alinearlo uniformemente.
+  - Color gris oscuro para mejor visibilidad.
+*/
+.login-container h2 {
+    margin-bottom: 2.2rem;
+    border-bottom: 1.5px solid #b8b8b8;
+    padding-bottom: 1.2rem;
+    font-size: 2rem;
+    text-align: justify;
+    color: #555;
+}
+
+/* 
+  Estilos para los grupos de entrada.
+  - Se agrega margen inferior para separar cada campo.
+  - Se alinea el texto a la izquierda.
+*/
+.input-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+/* 
+  Estilos para las etiquetas de los campos de entrada.
+  - Se muestran en bloque para estar sobre el campo correspondiente.
+  - Se usa negrita para mayor visibilidad.
+  - Se establece un color gris para diferenciarlas del texto de entrada.
+*/
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #8b8b8b;
+}
+
+/* 
+  Estilos para los campos de entrada.
+  - Se establece un ancho del 100% para que ocupen toda la línea.
+  - Se aplica padding para mejor usabilidad.
+  - Bordes redondeados para armonizar con el diseño del contenedor.
+  - Se define un tamaño de fuente de 1rem para mejor lectura.
+  - `box-sizing: border-box` evita que el padding aumente el tamaño del input.
+*/
+.input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #939393;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* 
+  Estilos para el botón de inicio de sesión.
+  - Se usa `display: inline-block` para mantener el tamaño adecuado.
+  - Fondo azul claro para destacar.
+  - Texto en blanco para contraste.
+  - Se define un ancho del 100% para mantener alineación con los inputs.
+  - Se agrega margen inferior para separación.
+  - Bordes redondeados para diseño uniforme.
+  - Efecto de transición para suavizar el cambio de color en hover.
+*/
+.login-button {
+    display: inline-block;
+    background-color: #99bada;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* 
+  Estilos para el hover del botón de inicio de sesión.
+  - Se oscurece el color al pasar el cursor para indicar interacción.
+*/
+.login-button:hover {
+    background-color: #738ca5;
+}
+
+/* 
+  Estilos para el contenedor del enlace "¿Olvidaste tu contraseña?".
+  - Se coloca un borde inferior para separarlo visualmente.
+  - Se centra el texto.
+  - Se agrega margen superior para dar espacio con el botón.
+  - Se cambia el cursor a `pointer` para indicar que es interactivo.
+*/
+.forgot-password {
+    border-bottom: 1px solid #b8b8b8;
+    padding-bottom: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+/* 
+  Estilos para el enlace "¿Olvidaste tu contraseña?".
+  - Se establece un color gris oscuro para mayor legibilidad.
+  - Tamaño de fuente más pequeño para que no compita con otros elementos.
+  - Se elimina el subrayado predeterminado de los enlaces.
+  - Se aplica un peso de fuente medio para destacar.
+*/
+.forgot-password a {
+    color: #4a4a4a;
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* 
+  Estilos para el hover del enlace "¿Olvidaste tu contraseña?".
+  - Se cambia a un azul más oscuro para resaltar la interacción.
+*/
+.forgot-password a:hover {
+    color: #738ca5;
+}
